@@ -28,28 +28,27 @@ function headerMover(){
         e.preventDefault();
         if($('.main').height()>500){
             var $a = $('.main').height();
-            var $distance02=($('.canDo').offset().top - ($a - 350));
-            var $distance03=($('.port').offset().top - ($a - 350));
+            var $distance01=($('.canDo').offset().top - ($a - 350));
+            var $distance02=($('.port').offset().top - ($a - 350));
             console.log("500이상");
             if($(this).index()==0){
                 $("html").stop().animate({scrollTop:97});
             }else if($(this).index()==1){
-                $("html").stop().animate({scrollTop:$distance02});
+                $("html").stop().animate({scrollTop:$distance01});
             }else if($(this).index()==2){
-                $("html").stop().animate({scrollTop:$distance03});
+                $("html").stop().animate({scrollTop:$distance02});
             }
         }else if($('.main').height()<500){
             var $a = ($('.main').height() - 450);
-            var $distance01=($('.about').offset().top - $a - 100);
-            var $distance02=($('.canDo').offset().top - $a - 100);
-            var $distance03=($('.port').offset().top - $a - 100);
+            var $distance01=($('.canDo').offset().top - $a - 100);
+            var $distance02=($('.port').offset().top - $a - 100);
             console.log("500미만");
             if($(this).index()==0){
-                $("html").stop().animate({scrollTop:$distance01});
+                $("html").stop().animate({scrollTop:97});
             }else if($(this).index()==1){
-                $("html").stop().animate({scrollTop:$distance02});
+                $("html").stop().animate({scrollTop:$distance01});
             }else if($(this).index()==2){
-                $("html").stop().animate({scrollTop:$distance03});
+                $("html").stop().animate({scrollTop:$distance02});
             }
         }
     })
