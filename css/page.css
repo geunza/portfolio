@@ -89,6 +89,7 @@ h2{
 .canDo .inner div ul li{margin-bottom:20px;}
 .canDo .inner div ul li dl dt{color:#ccc; font-size:20px; padding-left:25px; line-height:50px; border:1px solid #ccc; border-radius:10px; margin-bottom:15px; cursor: pointer; transition-duration:0.3s;}
 .canDo .inner div ul li dl dt:hover{color:#2a9dee; border-color:#2a9dee;}
+.canDo .inner div ul li dl dt:hover ~ dd{color:#fff;}
 .canDo .inner div ul:hover li dl dt:not(:hover){opacity:0.7;}
 .canDo .inner div ul li dl dd{color:#a9a9a9; font-size:14px; padding-left:35px; line-height:20px;}
 .canDo .inner div ul li:not(:first-child) dl dd{display:none;}
