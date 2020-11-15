@@ -23,10 +23,10 @@ h2{
     position: absolute; top:0; right:0; bottom:0; left:0; content: attr(data-text); 
 }
 .main p::before{
-    color:#800080; z-index:9; animation:geunyoung01 0.3s ease infinite;
+    color:#800080; z-index:-1; animation:geunyoung01 0.3s ease infinite;
 }
 .main p::after{
-    color:#00ffff; z-index:8; animation:geunyoung02 0.3s ease infinite;
+    color:#00ffff; z-index:-2; animation:geunyoung02 0.3s ease infinite;
 }
 @keyframes geunyoung01{
     0%{
