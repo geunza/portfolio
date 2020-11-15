@@ -23,16 +23,20 @@ function headerMover(){
     var $distance01=($('.about').offset().top - $(window).height() + 97);
     var $distance02=($('.canDo').offset().top - $(window).height() + 350);
     var $distance03=($('.port').offset().top - $(window).height() + 350);
+    $("h1").click(function(e){
+        e.preventDefault();
+        $("html").stop().animate({scrollTop:0});
+    })
     $("nav ul li:first-child").click(function(e){
         e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance01})
+        $("html").stop().animate({scrollTop:$distance01});
     })
     $("nav ul li:nth-child(2)").click(function(e){
         e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance02})
+        $("html").stop().animate({scrollTop:$distance02});
     })
     $("nav ul li:last-child").click(function(e){
         e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance03})
+        $("html").stop().animate({scrollTop:$distance03});
     })
 }
