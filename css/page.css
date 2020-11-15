@@ -14,7 +14,7 @@ h2{
     color:#1a1a1a;font-size:96px; width:50%;max-width:530px; position: absolute;  left:50%;top:50%; transform:translate3d(-50%,-50%,0); transition-duration:0.7s;z-index:10;
 }
 .main .inner{
-    position:relative; height:100%;
+    height:100%;
 }
 .main.active p{
     left: 3%; font-size: 28px; display: inline; transform: translate3d(0,0,0); top: 97px; line-height: 100px;
@@ -68,7 +68,7 @@ h2{
 .about{background-color:#ccc; text-align:center;}
 .about .inner{padding:250px 0 100px;}
 .about img{position: absolute; left: 50%; transform: translateX(-50%); top: -225px;}
-.about h2{color:#1a1a1a; font-size:36px; margin-bottom:50px;}
+.about h2{color:#1a1a1a;}
 .about ul{width:370px;padding-left: 100px; margin:auto;}
 .about ul li{line-height:45px;}
 .about ul li dl:after{content:'';display:block; clear: both; visibility: hidden;}
@@ -77,15 +77,17 @@ h2{
 .about ul li dl dd{ white-space: nowrap;}
 .about ul li dl dd span{margin-right:50px;}
 /* .about Fin */
-
+.canDo, .port{
+    padding:100px 0;
+}
 .canDo{
-    padding:100px 0; 
     background:url(../sliceImage/bg_02.png) no-repeat center;
     background-size:cover; min-height:400px;
 }
 .canDo h2{color:#e6e6e6;}
-.canDo .inner img{width:45%; float:left; margin-right:10%;}
+.canDo .inner img,
 .canDo .inner div{width:45%; float:left;}
+.canDo .inner img{margin-right:10%;}
 .canDo .inner div ul li{margin-bottom:20px;}
 .canDo .inner div ul li dl dt{color:#ccc; font-size:20px; padding-left:25px; line-height:50px; border:1px solid #ccc; border-radius:10px; margin-bottom:15px; cursor: pointer; transition-duration:0.3s;}
 .canDo .inner div ul li dl dt:hover{color:#2a9dee; border-color:#2a9dee;}
@@ -94,12 +96,11 @@ h2{
 .canDo .inner div ul li dl dd{color:#a9a9a9; font-size:14px; padding-left:35px; line-height:20px;}
 .canDo .inner div ul li:not(:first-child) dl dd{display:none;}
 
-.port{padding:100px 0;}
 .port ul{display:flex; justify-content: space-between; flex-wrap: wrap;}
-.port ul li{width:30%;  margin-bottom:60px; border:1px solid rgba(0,0,0,0.1);}
+.port ul li{width:30%;  margin-bottom:60px; border:1px solid rgba(0,0,0,0.1);background-color: rgba(255,255,255,0.8);}
 .port ul li a{display:block; height:100%; color:#1a1a1a;}
 .port ul li a figure{width:100%;}
 .port ul li a figure div{height:280px; overflow: hidden;}
 .port ul li a figure div img{width:100%; transition-duration:0.3s;}
-.port ul li a figure div:hover img{transform:scale(1.2);}
+.port ul li a figure div:hover img{transform:scale(1.1);}
 .port ul li a figure figcaption{ line-height:60px; text-align: center; font-size:14px;}

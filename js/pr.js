@@ -10,7 +10,6 @@ function topCheck(){
         }else{
             $(".main, header").removeClass("active")
         }
-        console.log($(document).scrollTop());
     })
 }
 function ddSpread(){
@@ -20,23 +19,40 @@ function ddSpread(){
     })
 }
 function headerMover(){
-    var $distance01=($('.about').offset().top - $(window).height() + 97);
-    var $distance02=($('.canDo').offset().top - $(window).height() + 350);
-    var $distance03=($('.port').offset().top - $(window).height() + 350);
-    $("h1").click(function(e){
+        $("h1").click(function(e){
         e.preventDefault();
         $("html").stop().animate({scrollTop:0});
     })
-    $("nav ul li:first-child").click(function(e){
+    
+    $('nav ul li').click(function(e){
         e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance01});
+        if($('.main').height()>500){
+            var $a = $('.main').height();
+            var $distance01=($('.about').offset().top - ($a - 350));
+            var $distance02=($('.canDo').offset().top - ($a - 350));
+            var $distance03=($('.port').offset().top - ($a - 350));
+            console.log("500이상");
+            if($(this).index()==0){
+                $("html").stop().animate({scrollTop:$distance01});
+            }else if($(this).index()==1){
+                $("html").stop().animate({scrollTop:$distance02});
+            }else if($(this).index()==2){
+                $("html").stop().animate({scrollTop:$distance03});
+            }
+        }else if($('.main').height()<500){
+            var $a = ($('.main').height() - 450);
+            var $distance01=($('.about').offset().top - $a - 100);
+            var $distance02=($('.canDo').offset().top - $a - 100);
+            var $distance03=($('.port').offset().top - $a - 100);
+            console.log("500미만");
+            if($(this).index()==0){
+                $("html").stop().animate({scrollTop:$distance01});
+            }else if($(this).index()==1){
+                $("html").stop().animate({scrollTop:$distance02});
+            }else if($(this).index()==2){
+                $("html").stop().animate({scrollTop:$distance03});
+            }
+        }
     })
-    $("nav ul li:nth-child(2)").click(function(e){
-        e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance02});
-    })
-    $("nav ul li:last-child").click(function(e){
-        e.preventDefault();
-        $("html").stop().animate({scrollTop:$distance03});
-    })
+
 }
