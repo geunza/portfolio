@@ -28,6 +28,9 @@ h2{
 .main p::after{
     color:#00ffff; z-index:-2; animation:geunyoung02 0.3s ease infinite;
 }
+.active .main p::before,.active .main p::after{
+    animation:none;
+}
 @keyframes geunyoung01{
     0%{
         transform: translate(-1px, 1px);
