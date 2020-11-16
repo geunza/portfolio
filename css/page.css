@@ -11,13 +11,13 @@ h2{
 }
 
 .main p{
-    color:#1a1a1a;font-size:96px; width:50%;max-width:530px; position: absolute;  left:50%;top:50%; transform:translate3d(-50%,-50%,0); transition-duration:0.7s;z-index:10;
+    color:#1a1a1a;font-size:96px; position: absolute;  left:50%;top:50%; transform:translate3d(-50%,-50%,0); transition-duration:0.5s;z-index:10;
 }
 .main .inner{
     height:100%;
 }
 .main.active p{
-    left: 3%; font-size: 28px; display: inline; transform: translate3d(0,0,0); top: 97px; line-height: 100px;
+    left: 3%; font-size: 28px; display: inline; transform: translate3d(0,0,0); top: 97px; line-height: 100px; opacity:0;
 }
 .main p::before,.main p::after{
     position: absolute; top:0; right:0; bottom:0; left:0; content: attr(data-text); 
@@ -65,25 +65,27 @@ h2{
         transform: translate(1px, 1px);        
     }
 }
+/* .main Fin.. */
+
+
 .about{background-color:#ccc; text-align:center;}
 .about .inner{padding:250px 0 100px;}
 .about img{position: absolute; left: 50%; transform: translateX(-50%); top: -225px;}
 .about h2{color:#1a1a1a;}
 .about ul{width:370px;padding-left: 100px; margin:auto;}
-.about ul li{line-height:45px;}
+.about ul li{line-height:45px; color:#333;}
 .about ul li dl:after{content:'';display:block; clear: both; visibility: hidden;}
 .about ul li dl>*{float:left;}
 .about ul li dl dt{width:90px; text-align:left;}
-.about ul li dl dd{ white-space: nowrap;}
+.about ul li dl dd{white-space: nowrap;}
 .about ul li dl dd span{margin-right:50px;}
+
+.about.show h2,.about.show ul li{opacity:1; transform:translate3d(0,0,0);}
 /* .about Fin */
-.canDo, .port{
-    padding:100px 0;
-}
-.canDo{
-    background:url(../sliceImage/bg_02.png) no-repeat center;
-    background-size:cover; min-height:400px;
-}
+
+
+.canDo, .port{padding:100px 0;}
+.canDo{background:url(../sliceImage/bg_02.png) no-repeat center; background-size:cover; min-height:400px;}
 .canDo h2{color:#e6e6e6;}
 .canDo .inner img,
 .canDo .inner div{width:45%; float:left;}
@@ -104,3 +106,14 @@ h2{
 .port ul li a figure div img{width:100%; transition-duration:0.3s;}
 .port ul li a figure div:hover img{transform:scale(1.1);}
 .port ul li a figure figcaption{ line-height:60px; text-align: center; font-size:14px;}
+/* .port Fin */
+
+
+
+
+section:not(.main) h2{transition-duration:0.3s; transition-delay:0.2s; opacity:0; transform:translate3d(30px, 50px, 0);}
+section.show h2{opacity:1; transform:translate3d(0,0,0);}
+.canDo img{transition-duration:0.3s; transition-delay:0.4s; opacity:0; transform:translate3d(-30px, 50px, 0);}
+section:not(.main) ul{transition-duration:0.3s; transition-delay:0.4s; opacity:0; transform:translate3d(30px, 50px, 0);}
+.canDo.show img,
+section.show ul{opacity:1; transform:translate3d(0,0,0);}

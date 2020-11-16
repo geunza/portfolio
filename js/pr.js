@@ -2,6 +2,7 @@ $(document).ready(function(){
     topCheck();
     ddSpread();
     headerMover();
+    offsetCheckeR()
 })
 function topCheck(){
     $(document).scroll(function(){
@@ -52,5 +53,27 @@ function headerMover(){
             }
         }
     })
-
+}
+function offsetCheckeR(){
+    $(window).scroll(function(){
+        var $a = $(window).scrollTop();
+        var $dis01 = $('.canDo').offset().top;
+        var $dis02 = $('.port').offset().top;
+        console.log($a);
+        if($a >= 90){
+            $('.about').addClass("show");
+        }else{
+            $('.about').removeClass("show");
+        }
+        if($a >= ($dis01 - ($('.about').height()/2))){
+            $('.canDo').addClass("show");
+        }else{
+            $('.canDo').removeClass("show");
+        }
+        if($a >= $dis01){
+            $('.port').addClass("show");
+        }else{
+            $('.port').removeClass("show");
+        }
+    })
 }
