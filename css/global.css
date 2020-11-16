@@ -9,8 +9,8 @@ body {
 .roboto{
     font-family: 'Roboto', sans-serif;
 }
-.noto{
-    font-family: 'Noto Sans KR', sans-serif;
+.nanum{
+    font-family: 'NanumSquare', sans-serif;
 }
 .inner{
     width:100%; max-width:1200px; margin:auto;

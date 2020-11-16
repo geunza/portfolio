@@ -2,7 +2,8 @@ $(document).ready(function(){
     topCheck();
     ddSpread();
     headerMover();
-    offsetCheckeR()
+    offsetChecker();
+    flexPriority();
 })
 function topCheck(){
     $(document).scroll(function(){
@@ -54,7 +55,7 @@ function headerMover(){
         }
     })
 }
-function offsetCheckeR(){
+function offsetChecker(){
     $(window).scroll(function(){
         var $a = $(window).scrollTop();
         var $dis01 = $('.canDo').offset().top;
@@ -76,4 +77,12 @@ function offsetCheckeR(){
             $('.port').removeClass("show");
         }
     })
+}
+function flexPriority(){
+    var $target = $('.port ul li');
+    var $numb = $target.length;
+    console.log($numb);
+    for(i=0; i<$numb; i++){
+        $target.eq(i).css("order","-"+i);
+    }
 }
