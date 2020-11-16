@@ -35,6 +35,8 @@ header nav{right:0;}
 header nav ul{display:inline-block;}
 header nav ul li{float:left;}
 header nav ul li:not(:last-child){margin-right:70px;}
+header nav ul li:hover{transform:scale(1.1);}
+header nav ul li a{transform: rotate(0.028deg);}
 header button{display:none;}
 /* header Fin */
 
