@@ -100,7 +100,7 @@ h2{
 /* .canDo Fin.. */
 
 .port ul{display:flex; justify-content: space-between; flex-wrap: wrap;}
-.port ul li{width:30%;  margin-bottom:60px; border:1px solid rgba(0,0,0,0.1);background-color: rgba(255,255,255,0.8);}
+.port ul li{width:30%;  margin-bottom:60px; border:1px solid rgba(0,0,0,0.1);background-color: rgba(255,255,255,0.8);box-shadow: 2px 2px 15px rgba(0,0,0,0}
 .port ul li a{display:block; height:100%; color:#1a1a1a;}
 .port ul li a figure{width:100%;}
 .port ul li a figure div{height:280px; overflow: hidden;}
