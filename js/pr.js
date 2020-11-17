@@ -16,8 +16,10 @@ function topCheck(){
 }
 function ddSpread(){
     $(".canDo dt").click(function(){
-        $(".canDo dd").stop().slideUp();
-        $(this).siblings("dd").stop().slideDown();
+        $(".canDo dd div").slideUp();
+		if ($(this).next('dd').children().css("display") == "none") {	
+			$(this).next('dd').children().slideDown();
+		};
     })
 }
 function headerMover(){
