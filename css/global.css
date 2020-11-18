@@ -45,4 +45,5 @@ header button{display:none;}
 footer{background-color:#1a1a1a; padding:65px 0;}
 footer p{font-size:16px; color:rgba(255,255,255,0.7); text-align:center; font-weight:300;}
 
-#cube {height:6px; width:6px; margin-top:-3px; margin-left:-3px; background:#15a7da; position:absolute; top:50%; left:50%; pointer-events: none;}
+#cube {height:6px; width:6px; margin-top:-3px; margin-left:-3px; background:#15a7da; position:absolute; top:50%; left:50%; transition-duration:0.5s; transition-property: width, height, margin-top, margin-left; pointer-events: none;}
+#cube:hover{width:10px;height:10px; margin-top:-5px; margin-left:-5px;}
