@@ -91,7 +91,7 @@ h2{
 .canDo .inner div{width:45%; float:left;}
 .canDo .inner img{margin-right:10%;}
 .canDo .inner div ul li{margin-bottom:15px;}
-.canDo .inner div ul li dl dt{color:#ccc; font-size:20px; padding-left:25px; line-height:50px; border:1px solid #ccc; border-radius:10px; cursor: pointer; transition-duration:0.3s;}
+.canDo .inner div ul li dl dt{color:#ccc; font-size:20px; padding-left:25px; line-height:50px; border:1px solid #ccc; border-radius:10px; transition-duration:0.3s;}
 .canDo .inner div ul li dl dd{color:#a9a9a9; font-size:14px; padding:10px 0 0 35px; line-height:20px;transform: rotate(0.028deg);}
 .canDo .inner div ul li dl dd div{float:unset; width:100%;}
 .canDo .inner div ul li:not(:first-child) dl dd div{display:none;}

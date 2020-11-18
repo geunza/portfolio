@@ -4,6 +4,8 @@ $(document).ready(function(){
     headerMover();
     offsetChecker();
     flexPriority();
+    flexChecker();
+    mouseMover();
 })
 function topCheck(){
     $(document).scroll(function(){
@@ -86,5 +88,29 @@ function flexPriority(){
     console.log($numb);
     for(i=0; i<$numb; i++){
         $target.eq(i).css("order","-"+i);
+    }
+}
+function flexChecker(){
+    var $a = $('.port ul li').length;
+    if($a % 3 == 0){
+        console.log("0");
+    }else if($a % 3 == 1){
+        console.log("1");
+    }else if($a % 3 == 2){
+        console.log("2");
+    }
+}
+function mouseMover(){
+    $("body").mousemove(function(e){
+        handleMouseMove(e);
+    });
+
+    function handleMouseMove(event) {
+        var x = event.pageX;
+        var y = event.pageY;
+        $("#cube").animate({
+            left: x,
+            top: y
+        }, 1);
     }
 }
