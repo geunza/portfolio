@@ -5,7 +5,6 @@ $(document).ready(function(){
     offsetChecker();
     flexPriority();
     flexChecker();
-    mouseMover();
 })
 function topCheck(){
     $(document).scroll(function(){
@@ -100,17 +99,21 @@ function flexChecker(){
         console.log("2");
     }
 }
-function mouseMover(){
-    $("body").mousemove(function(e){
+$(document).ready(function() {
+    $("body").mousemove(function (e) {
+        $("#cube").stop();
         handleMouseMove(e);
     });
 
-    function handleMouseMove(event) {
-        var x = event.pageX;
-        var y = event.pageY;
-        $("#cube").animate({
-            left: x,
-            top: y
-        }, 1);
-    }
+function handleMouseMove(event) {
+
+  var x = event.pageX,
+      y = event.pageY;
+
+      $("#cube").animate({
+        left: x,
+        top: y
+      }, 500);
+
 }
+});
