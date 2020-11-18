@@ -5,6 +5,7 @@ $(document).ready(function(){
     offsetChecker();
     flexPriority();
     flexChecker();
+    hoverCheck();
 })
 function topCheck(){
     $(document).scroll(function(){
@@ -69,7 +70,7 @@ function offsetChecker(){
         }else{
             $('.about').removeClass("show");
         }
-        if($a >= ($dis01 - ($('.about').height()/2))){
+        if($a >= $('.about').offset().top){
             $('.canDo').addClass("show");
         }else{
             $('.canDo').removeClass("show");
@@ -117,3 +118,11 @@ function handleMouseMove(event) {
 
 }
 });
+function hoverCheck(){
+    $("a, .canDo .inner div ul li dl dt").mouseenter(function(){
+        $("#cube").addClass("hover");
+    })
+    $("a, .canDo .inner div ul li dl dt").mouseleave(function(){
+        $("#cube").removeClass("hover");
+    })
+}
