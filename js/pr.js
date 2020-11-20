@@ -5,8 +5,9 @@ $(document).ready(function(){
     offsetChecker();
     flexPriority();
     flexChecker();
-    hoverCheck();
-})
+    navShow();
+    squareColor();
+})  
 function topCheck(){
     $(document).scroll(function(){
         if($(window).scrollTop()!=0){
@@ -118,11 +119,16 @@ function handleMouseMove(event) {
 
 }
 });
-function hoverCheck(){
-    $("a, .canDo .inner div ul li dl dt").mouseenter(function(){
-        $("#cube").addClass("hover");
+function navShow(){
+    $("header button").click(function(){
+        $("header nav").css()
     })
-    $("a, .canDo .inner div ul li dl dt").mouseleave(function(){
-        $("#cube").removeClass("hover");
+}
+function squareColor(){
+    $("a, dt").mouseenter(function(){
+        $("#cube").css("background","#40ff7f");
+    })
+    $("a, dt").mouseleave(function(){
+        $("#cube").css("background","#16ace0");
     })
 }
