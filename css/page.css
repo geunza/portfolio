@@ -118,7 +118,7 @@ section.show ul{opacity:1; transform:translate3d(0,0,0);}
 
     .port ul li{width:47%; margin-bottom:40px;}
     .port ul li a:not(.mobile) figure div{height:200px;}
-    .port ul li a:not(.mobile) figure figcaption{font-size:12px; white-space: normal; overflow:hidden; text-overflow: ellipsis;}
+    .port ul li a:not(.mobile) figure figcaption{font-size:12px; white-space: nowrap; overflow:hidden; text-overflow: ellipsis;}
     /*  */
 }
 @media screen and (min-width:768px){
