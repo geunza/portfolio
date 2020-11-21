@@ -116,7 +116,7 @@ section.show ul{opacity:1; transform:translate3d(0,0,0);}
     .canDo .inner div ul li dl dd{font-size:13px; padding:10px 10px 0 25px;}
     /* .canDo Fin.. */
 
-    .port ul li{width:47%; margin-bottom:40px;}
+    .port ul li{width:90%; margin-bottom:40px;}
     .port ul li a:not(.mobile) figure div{height:200px;}
     .port ul li a:not(.mobile) figure figcaption{font-size:12px; white-space: nowrap; overflow:hidden; text-overflow: ellipsis;}
     /*  */
