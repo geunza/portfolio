@@ -6,7 +6,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     cursor:url(../sliceImage/cursor_sam_bl.png)16 16, auto;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 a, .canDo .inner div ul li dl dt{cursor: url(../sliceImage/cursor_sam_gr.png) 16 16,auto;}
 .roboto{
