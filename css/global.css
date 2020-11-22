@@ -6,6 +6,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     cursor:url(../sliceImage/cursor_sam_bl.png)16 16, auto;
+    overflow: hidden;
 }
 a, .canDo .inner div ul li dl dt{cursor: url(../sliceImage/cursor_sam_gr.png) 16 16,auto;}
 .roboto{
@@ -48,19 +49,36 @@ footer p{color:rgba(255,255,255,0.7); text-align:center; font-weight:300;}
     header {height: 70px;}
     header .inner{height:100%;}
     header .inner> *:not(button){line-height:60px;}
-    header .inner > button{position:absolute; right:3%; top:15px; height:30px; width:30px;}
-    
+    header .inner > button{position:absolute; right:3%; top:15px; height:30px; width:30px; z-index:100; background-color:transparent; border:0;}
+    header .inner > button div{width:100%; height:60%; position:relative;}
+    header button span{display: block; position: absolute; width: 100%; height: 2px; border-radius: 15px; background-color: #fff; transition: all 0.5s;}
+    header button span:first-child{top: 0;}
+    header button span:nth-child(2){top: 50%;transform: translateY(-50%);}
+    header button span:last-child{bottom: 0;}
+    header button.active span:first-child{top: 50%;transform: translateY(-50%) rotate(45deg);}
+    header button.active span:nth-child(2){opacity: 0;}
+    header button.active span:last-child{bottom: 50%;transform: translateY(50%) rotate(-45deg);}
+
+
+    header h1{position:absolute;}
     header nav {
+        width: 100%;
+        text-align: center;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.8);
         position: fixed;
-        right: -125px;
+        right: calc(-100% - 1px);
         top: 0;
         padding: 60px 30px 0;
         box-sizing: border-box;
         transition-duration: 0.5s;
+        text-shadow: 2px 2px 5px rgba(26, 26, 26, 0.8);
     }
+    header.active nav{background-color:rgba(26,26,26,0.8);text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);}
+
     header nav.active{right:0;}
+
+
 
     footer{padding:45px 0;}
     footer p{font-size:13px;}
