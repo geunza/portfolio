@@ -3,7 +3,7 @@ h2{text-align:center;}
 .main{width:100%; height:100%;position:relative;left:0; top:0; transition-duration:0.3s;background: rgb(204,204,204); background: linear-gradient(180deg, rgba(204,204,204,1) 0%, rgba(53,53,53,1) 100%); }
 .main.active{background: rgba(204,204,204,0.8); background: linear-gradient(180deg, rgba(204,204,204,0.8) 0%, rgba(53,53,53,0.8) 100%); }
 .main p{color:#1a1a1a; position: absolute;  left:50%;top:50%; transform:translate3d(-50%,-50%,0); transition-duration:0.5s;z-index:10;}
-.main .inner{height:100%;}
+.main .inner{height:100%; background:url(../sliceImage/character_GY_tran.png) no-repeat center; background-size: contain;}
 .main.active p{left: 3%; font-size: 28px; display: inline; transform: translate3d(0,0,0); top: 97px; line-height: 100px; opacity:0;}
 .main p::before,.main p::after{position: absolute; top:0; right:0; bottom:0; left:0; content: attr(data-text); }
 .main p::before{color:#800080; z-index:-1; animation:geunyoung01 0.3s ease infinite;}
