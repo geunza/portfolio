@@ -128,9 +128,10 @@ function navShow(){
         navPos();
         var $w_size = $(window).width();
         if($w_size < $navXpos){
-            $('nav').addClass('active');
+            $('nav, header button').addClass('active');
+
         }else{
-            $('nav').removeClass('active');
+            $('nav, header button').removeClass('active');
         }
 
     })
