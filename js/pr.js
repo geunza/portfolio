@@ -37,7 +37,6 @@ function headerMover(){
             var $a = $('.main').height();
             var $distance01=($('.canDo').offset().top - ($a - 350));
             var $distance02=($('.port').offset().top - ($a - 350));
-            console.log("500이상");
             if($(this).index()==0){
                 $("html").stop().animate({scrollTop:97});
             }else if($(this).index()==1){
@@ -49,7 +48,6 @@ function headerMover(){
             var $a = ($('.main').height() - 450);
             var $distance01=($('.canDo').offset().top - $a - 100);
             var $distance02=($('.port').offset().top - $a - 100);
-            console.log("500미만");
             if($(this).index()==0){
                 $("html").stop().animate({scrollTop:97});
             }else if($(this).index()==1){
@@ -65,7 +63,6 @@ function offsetChecker(){
         var $a = $(window).scrollTop();
         var $dis01 = $('.canDo').offset().top;
         var $dis02 = $('.port').offset().top;
-        console.log($a);
         if($a >= 90){
             $('.about').addClass("show");
         }else{
@@ -86,42 +83,56 @@ function offsetChecker(){
 function flexPriority(){
     var $target = $('.port ul li');
     var $numb = $target.length;
-    console.log($numb);
     for(i=0; i<$numb; i++){
         $target.eq(i).css("order","-"+i);
     }
 }
+var $window_w;
 function flexChecker(){
     var $a = $('.port ul li').length;
-    if($a % 3 == 0){
-        console.log("0");
-    }else if($a % 3 == 1){
-        console.log("1");
-    }else if($a % 3 == 2){
-        console.log("2");
-    }
+    if($window_w < 768) return;
+        if($a % 3 == 0){
+            return;
+        }else if($a % 3 == 1){
+            $('.port ul li:last-child').after('<li style="visibility:hidden;"></li><li style="visibility:hidden;"></li>')
+        }else if($a % 3 == 2){
+            $('.port ul li:last-child').after('<li style="visibility:hidden;"></li>')
+        }
 }
-$(document).ready(function() {
+$(document).ready(function () {
     $("body").mousemove(function (e) {
+        var $window_w = $(window).width();
+        if($window_w < 1023) return;
         $("#cube").stop();
         handleMouseMove(e);
     });
 
-function handleMouseMove(event) {
-
-  var x = event.pageX,
-      y = event.pageY;
-
-      $("#cube").animate({
-        left: x,
-        top: y
-      }, 500);
-
-}
+    function handleMouseMove(event) {
+        var x = event.pageX,
+            y = event.pageY;
+        $("#cube").animate({
+            left: x,
+            top: y
+        }, 500);
+    }
 });
+var $navXpos;
+function navPos(){
+    $navXpos = $('nav').position().left;
+    $(window).resize(function(){
+        $navXpos = $('nav').position().left;
+    })
+}
 function navShow(){
-    $("header button").click(function(){
-        $("header nav").css()
+    $(".navBtn_open, nav ul li").click(function(){
+        navPos();
+        var $w_size = $(window).width();
+        if($w_size < $navXpos){
+            $('nav').addClass('active');
+        }else{
+            $('nav').removeClass('active');
+        }
+
     })
 }
 function squareColor(){
