@@ -49,9 +49,10 @@ footer p{color:rgba(255,255,255,0.7); text-align:center; font-weight:300;}
     header {height: 70px;}
     header .inner{height:100%;}
     header .inner> *:not(button){line-height:60px;}
-    header .inner > button{position:absolute; right:3%; top:15px; height:30px; width:30px; z-index:100; background-color:transparent; border:0;}
+    header .inner > button{position:absolute; right:3%; top:15px; height:30px; width:30px; z-index:100; background-color:transparent; border:0; padding:0;}
     header .inner > button div{width:100%; height:60%; position:relative;}
-    header button span{display: block; position: absolute; width: 100%; height: 2px; border-radius: 15px; background-color: #fff; transition: all 0.5s;}
+    header button span{display: block; position: absolute; width: 100%; height: 2px; border-radius: 15px; background-color: #000; transition: all 0.5s;}
+    header.active button span{background-color:#fff;}
     header button span:first-child{top: 0;}
     header button span:nth-child(2){top: 50%;transform: translateY(-50%);}
     header button span:last-child{bottom: 0;}
