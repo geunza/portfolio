@@ -32,7 +32,7 @@ function headerMover(){
 })
 
 $('nav ul li').click(function(e){
-    e.preventDefault();
+    e.preventDefault();g
     console.log($window_w);
     var $a = $('.main').height();
     if($window_w>767){
