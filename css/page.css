@@ -3,6 +3,18 @@ h2{text-align:center;}
 .main{width:100%; height:100%;position:relative;left:0; top:0; transition-duration:0.3s;background: rgb(204,204,204); background: linear-gradient(180deg, rgba(204,204,204,1) 0%, rgba(53,53,53,1) 100%); }
 .main.active{background: rgba(204,204,204,0.8); background: linear-gradient(180deg, rgba(204,204,204,0.8) 0%, rgba(53,53,53,0.8) 100%); }
 .main p{color:#1a1a1a; position: absolute;  left:50%;top:50%; transform:translate3d(-50%,-50%,0); transition-duration:0.5s;z-index:10;}
+.main p span{color:inherit; animation:blur 10s ease-out infinite;-webkit-animation: blur 10s ease-out infinite;}
+.main p span:nth-child(1) {animation-delay: 0.1s;-webkit-animation-delay: 0.1s;}
+.main p span:nth-child(1) {animation-delay: 0.1s;-webkit-animation-delay: 0.1s;}
+.main p span:nth-child(2) {animation-delay: 0.2s;-webkit-animation-delay: 0.2s;}
+.main p span:nth-child(3) {animation-delay: 0.3s;-webkit-animation-delay: 0.3s;}
+.main p span:nth-child(4) {animation-delay: 0.4s;-webkit-animation-delay: 0.4s;}
+.main p span:nth-child(5) {animation-delay: 0.5s;-webkit-animation-delay: 0.5s;}
+.main p span:nth-child(6) {animation-delay: 0.6s;-webkit-animation-delay: 0.6s;}
+.main p span:nth-child(7) {animation-delay: 0.7s;-webkit-animation-delay: 0.7s;}
+.main p span:nth-child(8) {animation-delay: 0.8s;-webkit-animation-delay: 0.8s;}
+.main p span:nth-child(9) {animation-delay: 0.9s;-webkit-animation-delay: 0.9s;}
+
 .main .inner{height:100%; background:url(../sliceImage/character_GY_tran.png) no-repeat center; background-size: contain;}
 .main.active p{left: 3%; font-size: 28px; display: inline; transform: translate3d(0,0,0); top: 97px; line-height: 100px; opacity:0;}
 .main p::before,.main p::after{position: absolute; top:0; right:0; bottom:0; left:0; content: attr(data-text); }
@@ -42,6 +54,27 @@ h2{text-align:center;}
     100%{
         transform: translate(1px, 1px);        
     }
+}
+@keyframes blur {
+	0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	15%		{opacity: 1;}
+	20%		{text-shadow:  0 0 0px #fff;}
+	80%		{text-shadow:  0 0 0px #fff;}
+	85%		{opacity: 1;}
+	95%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+}
+
+@-webkit-keyframes blur {
+	0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	15%		{opacity: 1;}
+	20%		{text-shadow:  0 0 0px #fff;}
+	80%		{text-shadow:  0 0 0px #fff;}
+	85%		{opacity: 1;}
+	95%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 100px #fff; opacity:0;}
 }
 /* .main Fin.. */
 
