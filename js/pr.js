@@ -1,7 +1,7 @@
 $(document).ready(function(){
     scrollEvent();
     clickEvent();
-
+    flexEvent();
     navShow();
 })  
 var $window_w;
